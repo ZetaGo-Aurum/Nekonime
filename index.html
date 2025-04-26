@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Version Bump & Title Change -->
-    <title>NekoNime v9.2.8 - Load More Sepuasnya, Kategori Full Uwu~! ♡</title>
-    <meta name="description" content="NekoNime Makin Nekat! Load More tanpa batas sepuasnya! Jelajahi galeri super lengkap, Gacha universal, tombol anti-ngilang! Koleksi waifu/husbando impianmu~ 💖">
+    <title>NekoNime v9.2.9 - Gacha Super Responsif, Load More Sepuasnya~! ♡</title>
+    <meta name="description" content="NekoNime Gacha Tanpa Cooldown! Klik secepat kilat! Load More tanpa batas, galeri super lengkap, koleksi waifu/husbando impianmu~ 💖">
 
     <!-- External Libraries -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -158,12 +158,7 @@
 
         /* --- Load More Button (ALWAYS VISIBLE, STATE CHANGES) --- */
         #load-more-container { text-align: center; margin-top: 2rem; padding-bottom: 1.5rem; min-height: 70px; /* GUARANTEED to be visible on gallery page */ }
-        #load-more-btn {
-            padding: 0.75rem 2rem; background: var(--accent-gradient); color: white; font-weight: 600;
-            border-radius: 999px; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);
-            transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;
-            border: none; cursor: pointer;
-        }
+        #load-more-btn { padding: 0.75rem 2rem; background: var(--accent-gradient); color: white; font-weight: 600; border-radius: 999px; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25); transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; border: none; cursor: pointer; }
         #load-more-btn:hover:not(:disabled) { transform: scale(1.05); box-shadow: 0 6px 20px rgba(236, 72, 153, 0.35); background: var(--accent-gradient-hover); }
         /* Only disabled WHILE loading */
         #load-more-btn:disabled { opacity: 0.6; cursor: not-allowed; background: var(--glass-bg); box-shadow: none; transform: none; }
@@ -410,10 +405,10 @@
                         <p id="favorites-empty" class="history-empty text-center text-gray-400 mt-6 hidden" data-empty-message="Ehh? Belum ada favorit? ( T д T ) Jangan malu-malu, klik ikon hati ♡ di gambar yang kamu suka ya!">.</p>
                     </section>
 
-                     <!-- Page: Gacha (Universal Gacha) -->
+                     <!-- Page: Gacha (Universal Gacha, Tanpa Cooldown!) -->
                     <section id="page-random-girl" class="page hidden flex flex-col items-center justify-center text-center">
                         <h2 class="text-3xl font-semibold mb-6 uwu-text mt-0">Gacha Universal NekoNime! <span class="text-lg">🎰💖</span></h2>
-                        <p class="mb-6 text-gray-400 max-w-md mx-auto">Siap-siap dapet kejutan <span class="uwu-text">moe acak</span> dari SEMUA kategori di API <strong id="gacha-api-name" class="text-purple-300">ini</strong>! Semoga dapet waifu/husbando idaman~</p>
+                        <p class="mb-6 text-gray-400 max-w-md mx-auto">Siap-siap dapet kejutan <span class="uwu-text">moe acak</span> dari SEMUA kategori di API <strong id="gacha-api-name" class="text-purple-300">ini</strong>! Semoga dapet waifu/husbando idaman~ <span class="uwu-text">(Klik secepatnya boleh kok!)</span></p>
 
                         <!-- Gacha Buttons Container -->
                         <div id="gacha-actions" class="w-full max-w-lg flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -496,7 +491,7 @@
                             Fitur andalan kita yang <span class="uwu-text">bikin gemes</span>:
                             <ul class="list-none text-center mt-2 space-y-1 text-gray-400">
                                 <li><i data-lucide="layout-grid" class="inline-block w-4 h-4 text-purple-300 mr-1"></i> Galeri <strong class="text-purple-300">Super Lengkap</strong> (<span class="uwu-text">SFW/NSFW, pilih API & kategori bejibun!</span>)</li>
-                                <li><i data-lucide="gift" class="inline-block w-4 h-4 text-pink-400 mr-1"></i> <strong class="text-pink-300">Gacha Universal</strong> (<span class="uwu-text">acak dari semua kategori API!</span>)</li>
+                                <li><i data-lucide="gift" class="inline-block w-4 h-4 text-pink-400 mr-1"></i> <strong class="text-pink-300">Gacha Universal</strong> (<span class="uwu-text">acak dari semua kategori API, tanpa cooldown!⚡</span>)</li>
                                 <li><i data-lucide="chevrons-down" class="inline-block w-4 h-4 text-yellow-400 mr-1"></i> Tombol Muat Lebih Banyak <strong class="text-yellow-300">Sepuasnya</strong>! (<span class="uwu-text">Anti-ngilang, klik terus!</span>)</li>
                                 <li><i data-lucide="library" class="inline-block w-4 h-4 text-blue-400 mr-1"></i> Bikin Koleksi Pribadi (<span class="uwu-text">harta karunmu!</span>)</li>
                                 <li><i data-lucide="heart" class="inline-block w-4 h-4 text-red-400 mr-1"></i> Simpan Favorit (<span class="uwu-text">buat yang spesial!</span>)</li>
@@ -509,7 +504,7 @@
                             Semua keajaiban ini berjalan mulus pakai <strong class="text-teal-300">Tailwind CSS</strong> & <strong class="text-yellow-300">JavaScript</strong> murni dalam <em class="text-green-300">Single Page Application (SPA)</em>. Cepat, ringan, dan <span class="uwu-text">uwu</span> pastinya! <span class="uwu-text">(づ￣ ³￣)づ</span> Jangan lupa kasih feedback ya kalau ada ide!
                         </p>
                         <p class="mt-6 text-center text-sm text-gray-400">
-                            Versi 9.2.8 | Dibuat dengan <i data-lucide="sparkles" class="inline-block w-4 h-4 text-yellow-400"></i> oleh <span class="font-semibold text-purple-300">ZetaGo-Au(rum)</span>.
+                            Versi 9.2.9 | Dibuat dengan <i data-lucide="sparkles" class="inline-block w-4 h-4 text-yellow-400"></i> oleh <span class="font-semibold text-purple-300">Delta Astra</span>.
                             Makasih udah mampir~! <span class="uwu-text">(⌒▽⌒)☆</span>
                         </p>
                     </section>
@@ -639,81 +634,25 @@
         const FEEDBACK_EMAIL = "deltaastra24@gmail.com";
         const FETCH_TIMEOUT = 20000; // 20 detik
         const GACHA_ANIMATION_BASE_DURATION = 1500; // ms
-        const GACHA_COOLDOWN = 1000; // ms
+        // const GACHA_COOLDOWN = 1000; // DIHAPUS! Gacha tanpa cooldown sekarang!
 
         // --- API Configuration (Super Lengkap Uwu Version!) ---
         const API_CONFIG = {
             nekos: {
                 name: 'Nekos.best',
                 baseUrl: 'https://nekos.best/api/v2/',
-                // Kategori buat tombol galeri (dipilih yg paling umum & SFW)
-                categories: [
-                    { name: "Waifu Tercinta ♡", endpoint: "waifu" },
-                    { name: "Neko Gemes 🐾", endpoint: "neko" },
-                    { name: "Husbu Idaman ✨", endpoint: "husbando" },
-                    { name: "Kitsune Cerdik 🦊", endpoint: "kitsune" },
-                    { name: "Senyum Manis 😊", endpoint: "smile" },
-                    { name: "Peluk Hangat 🤗", endpoint: "cuddle" },
-                    { name: "Cium Mesra 😘", endpoint: "kiss" },
-                    { name: "Tampar Manja 👋", endpoint: "slap" },
-                    { name: "Elus Kepala 👋", endpoint: "pat" },
-                    { name: "Gigit Gemes >.<", endpoint: "bite" },
-                    { name: "Malu-malu😳", endpoint: "blush" },
-                    { name: "Kedip Nakal 😉", endpoint: "wink" },
-                    { name: "Manyun Lucu 😗", endpoint: "pout" },
-                    { name: "Tos Semangat 🙌", endpoint: "highfive" },
-                    { name: "Menari Ria 💃", endpoint: "dance" },
-                ],
-                 // Semua endpoint untuk Gacha Universal (semoga bener semua ya~ dari docs)
-                allEndpoints: [
-                    "waifu", "neko", "husbando", "kitsune", "smile", "cuddle", "kiss",
-                    "lick", "pat", "smug", "bonk", "yeet", "blush", "smile", "wave",
-                    "highfive", "handhold", "nom", "bite", "glomp", "slap", "kill",
-                    "kick", "happy", "wink", "poke", "dance", "cringe", "baka", "bored",
-                    "cry", "feed", "hug", "laugh", "poke", "pout", "shrug", "sleep",
-                    "stare", "think", "thumbsup", "tickle", "tired", "wink" // Banyak yg dobel, tapi biarin aja buat random
-                ],
+                categories: [ { name: "Waifu Tercinta ♡", endpoint: "waifu" }, { name: "Neko Gemes 🐾", endpoint: "neko" }, { name: "Husbu Idaman ✨", endpoint: "husbando" }, { name: "Kitsune Cerdik 🦊", endpoint: "kitsune" }, { name: "Senyum Manis 😊", endpoint: "smile" }, { name: "Peluk Hangat 🤗", endpoint: "cuddle" }, { name: "Cium Mesra 😘", endpoint: "kiss" }, { name: "Tampar Manja 👋", endpoint: "slap" }, { name: "Elus Kepala 👋", endpoint: "pat" }, { name: "Gigit Gemes >.<", endpoint: "bite" }, { name: "Malu-malu😳", endpoint: "blush" }, { name: "Kedip Nakal 😉", endpoint: "wink" }, { name: "Manyun Lucu 😗", endpoint: "pout" }, { name: "Tos Semangat 🙌", endpoint: "highfive" }, { name: "Menari Ria 💃", endpoint: "dance" }, ],
+                allEndpoints: [ "waifu", "neko", "husbando", "kitsune", "smile", "cuddle", "kiss", "lick", "pat", "smug", "bonk", "yeet", "blush", "smile", "wave", "highfive", "handhold", "nom", "bite", "glomp", "slap", "kill", "kick", "happy", "wink", "poke", "dance", "cringe", "baka", "bored", "cry", "feed", "hug", "laugh", "poke", "pout", "shrug", "sleep", "stare", "think", "thumbsup", "tickle", "tired", "wink" ],
                 defaultGachaCategory: 'waifu',
-                parser: (data) => {
-                    const item = data?.results?.[0] || data;
-                    if (item?.url) {
-                        const artistName = item.artist_name ? String(item.artist_name) : 'Artis Misterius (nekos.best)';
-                        const sourceUrl = item.source_url ? String(item.source_url) : item.url;
-                        return { url: item.url, artist_name: artistName, source_url: sourceUrl, apiSource: 'nekos' };
-                    }
-                    console.warn("Nekos parser dapet data aneh:", data);
-                    return null;
-                }
+                parser: (data) => { const item = data?.results?.[0] || data; if (item?.url) { const artistName = item.artist_name ? String(item.artist_name) : 'Artis Misterius (nekos.best)'; const sourceUrl = item.source_url ? String(item.source_url) : item.url; return { url: item.url, artist_name: artistName, source_url: sourceUrl, apiSource: 'nekos' }; } console.warn("Nekos parser dapet data aneh:", data); return null; }
             },
             waifupics: {
                 name: 'waifu.pics',
                 baseUrl: 'https://api.waifu.pics/',
-                // Kategori tombol galeri (pilihan SFW & NSFW)
-                categories: [
-                    { name: 'Waifu (SFW)', endpoint: 'sfw/waifu'}, { name: 'Neko (SFW)', endpoint: 'sfw/neko'},
-                    { name: 'Shinobu', endpoint: 'sfw/shinobu'}, { name: 'Megumin', endpoint: 'sfw/megumin'},
-                    { name: 'Peluk (SFW)', endpoint: 'sfw/hug'}, { name: 'Cium (SFW)', endpoint: 'sfw/kiss'},
-                    { name: 'Elus (SFW)', endpoint: 'sfw/pat'}, { name: 'Senyum (SFW)', endpoint: 'sfw/smile'},
-                    { name: 'Waifu (NSFW) 🔥', endpoint: 'nsfw/waifu'}, { name: 'Neko (NSFW) 🔥', endpoint: 'nsfw/neko'},
-                    { name: 'Trap (NSFW) 🤫', endpoint: 'nsfw/trap'}, { name: 'Blowjob (NSFW) 🔞', endpoint: 'nsfw/blowjob'}
-                ],
-                 // SEMUA endpoint waifu.pics buat Gacha Universal (SFW & NSFW)
-                allEndpoints: [
-                    'sfw/waifu', 'sfw/neko', 'sfw/shinobu', 'sfw/megumin', 'sfw/bully', 'sfw/cuddle',
-                    'sfw/cry', 'sfw/hug', 'sfw/awoo', 'sfw/kiss', 'sfw/lick', 'sfw/pat',
-                    'sfw/smug', 'sfw/bonk', 'sfw/yeet', 'sfw/blush', 'sfw/smile', 'sfw/wave',
-                    'sfw/highfive', 'sfw/handhold', 'sfw/nom', 'sfw/bite', 'sfw/glomp', 'sfw/slap',
-                    'sfw/kill', 'sfw/kick', 'sfw/happy', 'sfw/wink', 'sfw/poke', 'sfw/dance', 'sfw/cringe',
-                    'nsfw/waifu', 'nsfw/neko', 'nsfw/trap', 'nsfw/blowjob'
-                ],
+                categories: [ { name: 'Waifu (SFW)', endpoint: 'sfw/waifu'}, { name: 'Neko (SFW)', endpoint: 'sfw/neko'}, { name: 'Shinobu', endpoint: 'sfw/shinobu'}, { name: 'Megumin', endpoint: 'sfw/megumin'}, { name: 'Peluk (SFW)', endpoint: 'sfw/hug'}, { name: 'Cium (SFW)', endpoint: 'sfw/kiss'}, { name: 'Elus (SFW)', endpoint: 'sfw/pat'}, { name: 'Senyum (SFW)', endpoint: 'sfw/smile'}, { name: 'Waifu (NSFW) 🔥', endpoint: 'nsfw/waifu'}, { name: 'Neko (NSFW) 🔥', endpoint: 'nsfw/neko'}, { name: 'Trap (NSFW) 🤫', endpoint: 'nsfw/trap'}, { name: 'Blowjob (NSFW) 🔞', endpoint: 'nsfw/blowjob'} ],
+                allEndpoints: [ 'sfw/waifu', 'sfw/neko', 'sfw/shinobu', 'sfw/megumin', 'sfw/bully', 'sfw/cuddle', 'sfw/cry', 'sfw/hug', 'sfw/awoo', 'sfw/kiss', 'sfw/lick', 'sfw/pat', 'sfw/smug', 'sfw/bonk', 'sfw/yeet', 'sfw/blush', 'sfw/smile', 'sfw/wave', 'sfw/highfive', 'sfw/handhold', 'sfw/nom', 'sfw/bite', 'sfw/glomp', 'sfw/slap', 'sfw/kill', 'sfw/kick', 'sfw/happy', 'sfw/wink', 'sfw/poke', 'sfw/dance', 'sfw/cringe', 'nsfw/waifu', 'nsfw/neko', 'nsfw/trap', 'nsfw/blowjob' ],
                 defaultGachaCategory: 'sfw/waifu',
-                parser: (data) => {
-                    if (data?.url) {
-                        return { url: data.url, artist_name: 'Artis Misterius (waifu.pics)', source_url: data.url, apiSource: 'waifupics' };
-                    }
-                    console.warn("waifu.pics parser dapet data aneh:", data);
-                    return null;
-                }
+                parser: (data) => { if (data?.url) { return { url: data.url, artist_name: 'Artis Misterius (waifu.pics)', source_url: data.url, apiSource: 'waifupics' }; } console.warn("waifu.pics parser dapet data aneh:", data); return null; }
             },
          };
 
@@ -816,7 +755,6 @@
         let isLoadingMore = false;
         let currentLightboxImageData = null;
         let pendingLightboxData = null;
-        // let canLoadMoreGallery = true; // DIBUANG! Tidak relevan lagi
         let isGachaRunning = false;
         let currentGachaResultData = null;
 
@@ -837,7 +775,7 @@
             const pageTitles = { gallery: "Galeri Moe~", "random-girl": "Gacha Universal ♡", favorites: "Favorit Kesayangan 💖", history: "History Petualanganmu 📜", collections: "Koleksi Pribadimu 📚", about: "Tentang NekoNime Uwu~", settings: "Setelan Manja ✨", social: "Temu Kangen (Soon!)" };
             const title = pageTitles[pageId] || "NekoNime";
             const baseTitle = "NekoNime";
-            const version = "v9.2.8"; // Versi baru!
+            const version = "v9.2.9"; // Versi ngebut!
             if (headerTitle) { const isGallery = pageId === 'gallery'; headerTitle.innerHTML = isGallery ? `<a href="#gallery">${baseTitle} <span class='text-sm align-super uwu-text'> uwu~</span></a>` : escapeHTML(title); }
             document.title = `${baseTitle} ${version} - ${title}`;
         }
@@ -849,9 +787,7 @@
             const activePage = document.getElementById(`page-${pageId}`);
             const isGalleryPage = pageId === 'gallery';
 
-            // --- Load More Container Visibility ---
-            // Hanya tampilkan jika di halaman galeri
-            loadMoreContainer?.classList.toggle('hidden', !isGalleryPage);
+            loadMoreContainer?.classList.toggle('hidden', !isGalleryPage); // Hanya tampil di galeri
 
             if (activePage) {
                 activePage.classList.remove('hidden');
@@ -867,13 +803,12 @@
                     if (needsReload) {
                         loadGallery(currentGalleryCategory, true);
                     } else {
-                        // Pastikan tombol load more *selalu* siap ditekan (kecuali sedang loading)
-                        loadMoreBtn.disabled = isLoadingMore; // Hanya nonaktif jika sedang loading
-                        loadMoreBtnText.textContent = "Muat Lebih Banyak Manisnya~"; // Teks default
+                        // Tombol selalu bisa diklik (kecuali loading), teks selalu sama
+                        loadMoreBtn.disabled = isLoadingMore;
+                        loadMoreBtnText.textContent = "Muat Lebih Banyak Manisnya~";
                         loadMoreBtn.classList.toggle('loading', isLoadingMore);
                     }
-                    // Pastikan container terlihat (double check)
-                    loadMoreContainer.classList.remove('hidden');
+                    loadMoreContainer.classList.remove('hidden'); // Jamin terlihat
                 }
                 else if (pageId === 'history') { switchHistoryTab('browse'); if (historyBrowseGrid.children.length === 0) loadBrowseHistory(); if (historyGachaGrid.children.length === 0) loadGachaHistory(); }
                 else if (pageId === 'favorites') { if (favoritesGrid.children.length === 0) loadFavorites(); }
@@ -882,16 +817,13 @@
                 else if (pageId === 'settings') { populateApiSelector(); }
             } else {
                 console.warn(`Halaman ${pageId} nggak ketemu! Balik ke galeri ya~`);
-                pageId = 'gallery';
-                window.location.hash = '#gallery';
+                pageId = 'gallery'; window.location.hash = '#gallery';
                 const galleryPage = document.getElementById('page-gallery');
                 if (galleryPage) {
                     galleryPage.classList.remove('hidden');
                     loadMoreContainer?.classList.remove('hidden'); // Tampilkan juga di fallback
-                    currentApiConf = API_CONFIG[currentApiId];
-                    currentGalleryCategory = currentApiConf?.categories?.[0]?.endpoint || '';
-                    renderCategorySelectors();
-                    loadGallery(currentGalleryCategory, true);
+                    currentApiConf = API_CONFIG[currentApiId]; currentGalleryCategory = currentApiConf?.categories?.[0]?.endpoint || '';
+                    renderCategorySelectors(); loadGallery(currentGalleryCategory, true);
                 }
             }
 
@@ -908,69 +840,26 @@
              currentApiConf = API_CONFIG[currentApiId];
              if (!currentApiConf) { console.error(`Konfigurasi API ilang: ${currentApiId}`); return { data: [], errorCount: 0, error: "Konfigurasi API-nya ilang nih T_T." }; }
              const safeEndpoint = endpoint || currentApiConf.defaultGachaCategory || API_CONFIG.nekos.defaultGachaCategory;
-             const promises = [];
-             console.log(`Nyoba ngambil ${count} gambar dari ${currentApiId}/${safeEndpoint}... Sabar ya~`);
+             const promises = []; console.log(`Nyoba ngambil ${count} gambar dari ${currentApiId}/${safeEndpoint}... Sabar ya~`);
              for (let i = 0; i < count; i++) {
-                 const url = `${currentApiConf.baseUrl}${safeEndpoint}`;
-                 const controller = new AbortController();
+                 const url = `${currentApiConf.baseUrl}${safeEndpoint}`; const controller = new AbortController();
                  const timeoutId = setTimeout(() => { controller.abort(); console.warn(`Waduh, ${url} kelamaan responnya! Timeout.`); }, FETCH_TIMEOUT);
-                 promises.push(
-                     fetch(url, { signal: controller.signal, cache: 'no-cache' })
-                         .then(async response => {
-                             clearTimeout(timeoutId);
-                             if (!response.ok) { const errorText = await response.text().catch(() => `Status ${response.status}`); console.warn(`API Error ${response.status} ${url}:`, errorText.substring(0, 150)); return null; }
-                             const contentType = response.headers.get("content-type");
-                             if (!contentType || !contentType.includes("application/json")) { const text = await response.text(); console.warn(`Dapet balasan aneh (bukan JSON) dari ${url}:`, text.substring(0, 150)); return null; }
-                             return currentApiConf.parser(await response.json());
-                         })
-                         .catch(error => { clearTimeout(timeoutId); if (error.name !== 'AbortError') { console.error(`Fetch Error ${url}:`, error); } return null; })
-                 );
+                 promises.push( fetch(url, { signal: controller.signal, cache: 'no-cache' }).then(async response => { clearTimeout(timeoutId); if (!response.ok) { const errorText = await response.text().catch(() => `Status ${response.status}`); console.warn(`API Error ${response.status} ${url}:`, errorText.substring(0, 150)); return null; } const contentType = response.headers.get("content-type"); if (!contentType || !contentType.includes("application/json")) { const text = await response.text(); console.warn(`Dapet balasan aneh (bukan JSON) dari ${url}:`, text.substring(0, 150)); return null; } return currentApiConf.parser(await response.json()); }).catch(error => { clearTimeout(timeoutId); if (error.name !== 'AbortError') { console.error(`Fetch Error ${url}:`, error); } return null; }) );
              }
-             try {
-                 const results = await Promise.all(promises);
-                 const validResults = results.filter(r => r?.url);
-                 const errorCount = results.length - validResults.length;
-                 const uniqueResults = Array.from(new Map(validResults.map(item => [item.url, item])).values());
-                 console.log(`Hasil Fetch (${currentApiId}/${safeEndpoint}): ${uniqueResults.length}/${count} gambar unik valid. Error: ${errorCount}`);
-                 return { data: uniqueResults, errorCount: errorCount };
-             } catch (e) { console.error(`Promise.all Error ${safeEndpoint}:`, e); return { data: [], errorCount: count, error: "Aww, gagal proses hasil API-nya. Puyeng~" }; }
+             try { const results = await Promise.all(promises); const validResults = results.filter(r => r?.url); const errorCount = results.length - validResults.length; const uniqueResults = Array.from(new Map(validResults.map(item => [item.url, item])).values()); console.log(`Hasil Fetch (${currentApiId}/${safeEndpoint}): ${uniqueResults.length}/${count} gambar unik valid. Error: ${errorCount}`); return { data: uniqueResults, errorCount: errorCount }; }
+             catch (e) { console.error(`Promise.all Error ${safeEndpoint}:`, e); return { data: [], errorCount: count, error: "Aww, gagal proses hasil API-nya. Puyeng~" }; }
          }
 
         // --- Gallery Functions ---
-        function renderCategorySelectors() {
-             console.log(`Nyiapin tombol kategori buat API: ${currentApiId}`);
-             if (!categorySelectorContainer) return;
-             categorySelectorContainer.innerHTML = '';
-             currentApiConf = API_CONFIG[currentApiId];
-             const displayCategories = currentApiConf?.categories;
-             if (!displayCategories || !Array.isArray(displayCategories) || displayCategories.length === 0) {
-                 console.error("Kategori display nggak valid/kosong buat API:", currentApiId, currentApiConf);
-                 categorySelectorContainer.innerHTML = '<p class="text-sm text-gray-500 uwu-text">Yah, kategori buat API ini nggak ada T_T</p>';
-                 if (galleryGrid.children.length === 0) { renderInfo(galleryError, "Gagal muat kategori untuk API ini."); }
-                 loadMoreContainer?.classList.remove('hidden'); // Tetap tampil
-                 if(loadMoreBtn) { loadMoreBtn.disabled = true; loadMoreBtnText.textContent = "Error Kategori!"; }
-                 return;
-             }
-             if (!currentGalleryCategory || !displayCategories.some(c => c.endpoint === currentGalleryCategory)) { currentGalleryCategory = displayCategories[0]?.endpoint || ''; console.log(`Kategori direset ke default buat ${currentApiId}: ${currentGalleryCategory}`); }
-             displayCategories.forEach(cat => { if (!cat || !cat.endpoint || !cat.name) { console.warn("Ngelewatin kategori aneh:", cat); return; } const btn = document.createElement('button'); btn.className = 'category-btn'; btn.dataset.endpoint = cat.endpoint; btn.textContent = cat.name; btn.classList.toggle('active', cat.endpoint === currentGalleryCategory); btn.addEventListener('click', () => { if (!isLoadingMore && currentGalleryCategory !== cat.endpoint) { currentGalleryCategory = cat.endpoint; document.querySelectorAll('#category-selector-container .category-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); loadGallery(currentGalleryCategory, true); } else if (isLoadingMore) { showToast("Sabar dong~ Lagi ngambil gambar nih...", "info"); } }); categorySelectorContainer.appendChild(btn); });
-         }
-        function createImageCard(imageData, sourceContext = 'gallery') {
-             const imageUrl = imageData.url; const artistName = imageData.artist_name || 'Artisnya Misterius~ 🤫'; const sourceUrl = imageData.source_url || imageUrl; const imageId = imageUrl; const isFavorite = isFavoriteCheck(imageUrl); const isInCollection = isImageInAnyCollection(imageUrl); const apiSource = imageData.apiSource || 'unknown';
-             const safeImageUrl = escapeHTML(imageUrl); const safeArtistName = escapeHTML(artistName); const safeSourceUrl = escapeHTML(sourceUrl); const safeApiSource = escapeHTML(apiSource); const dataForJson = { url: imageUrl, artist_name: artistName, source_url: sourceUrl, apiSource: apiSource }; const imageDataStringEscaped = escapeHTML(JSON.stringify(dataForJson));
-             const showRemoveButton = ['history_browse', 'history_gacha', 'favorites'].includes(sourceContext) || sourceContext.startsWith('collection_'); let removeButtonTitle = 'Hapus?'; if (sourceContext.startsWith('collection_')) removeButtonTitle = 'Keluarkan dari Koleksi Ini'; else if (sourceContext === 'favorites') removeButtonTitle = 'Hapus dari Favorit Kesayangan'; else if (sourceContext.startsWith('history_')) removeButtonTitle = 'Hapus dari Jejak History';
-             return `<div class="image-card group" data-url="${safeImageUrl}" data-artist="${escapeHTML(encodeURIComponent(artistName))}" data-source-url="${safeSourceUrl}" data-id="${imageId}" data-source-api="${safeApiSource}" title="Art oleh ${safeArtistName}. Klik buat intip!"><img src="${safeImageUrl}" alt="Ilustrasi anime oleh ${safeArtistName}" class="w-full h-auto object-cover block bg-black/20" loading="lazy" decoding="async" onerror="this.closest('.image-card')?.remove(); console.warn('Kartu dihapus karena gambar error:', this.src);"><div class="card-overlay"><button class="add-to-collection-card-btn card-button ${isInCollection ? 'in-collection' : ''}" title="${isInCollection ? 'Udah ada di Koleksi Lho!' : 'Tambah ke Koleksi Yuk!'}" onclick="event.stopPropagation(); handleAddToCollectionClick(this.dataset.image);" data-image='${imageDataStringEscaped}'><i data-lucide="${isInCollection ? 'folder-check' : 'plus-square'}"></i></button><button class="favorite-btn card-button ${isFavorite ? 'active' : ''}" data-image='${imageDataStringEscaped}' title="${isFavorite ? 'Batalin Favorit? (╥_╥)' : 'Jadikan Favorit! ♡'}" onclick="event.stopPropagation(); toggleFavorite(this);"><i data-lucide="heart" class="${isFavorite ? 'fill-current' : ''}"></i></button></div>${showRemoveButton ? `<button class="remove-item-btn" data-id="${imageId}" data-source="${sourceContext}" title="${removeButtonTitle}" onclick="event.stopPropagation(); handleRemoveItem(this, '${sourceContext}');"><i data-lucide="x"></i></button>` : ''}</div>`;
-         }
+        function renderCategorySelectors() { console.log(`Nyiapin tombol kategori buat API: ${currentApiId}`); if (!categorySelectorContainer) return; categorySelectorContainer.innerHTML = ''; currentApiConf = API_CONFIG[currentApiId]; const displayCategories = currentApiConf?.categories; if (!displayCategories || !Array.isArray(displayCategories) || displayCategories.length === 0) { console.error("Kategori display nggak valid/kosong buat API:", currentApiId, currentApiConf); categorySelectorContainer.innerHTML = '<p class="text-sm text-gray-500 uwu-text">Yah, kategori buat API ini nggak ada T_T</p>'; if (galleryGrid.children.length === 0) { renderInfo(galleryError, "Gagal muat kategori untuk API ini."); } loadMoreContainer?.classList.remove('hidden'); if(loadMoreBtn) { loadMoreBtn.disabled = true; loadMoreBtnText.textContent = "Error Kategori!"; } return; } if (!currentGalleryCategory || !displayCategories.some(c => c.endpoint === currentGalleryCategory)) { currentGalleryCategory = displayCategories[0]?.endpoint || ''; console.log(`Kategori direset ke default buat ${currentApiId}: ${currentGalleryCategory}`); } displayCategories.forEach(cat => { if (!cat || !cat.endpoint || !cat.name) { console.warn("Ngelewatin kategori aneh:", cat); return; } const btn = document.createElement('button'); btn.className = 'category-btn'; btn.dataset.endpoint = cat.endpoint; btn.textContent = cat.name; btn.classList.toggle('active', cat.endpoint === currentGalleryCategory); btn.addEventListener('click', () => { if (!isLoadingMore && currentGalleryCategory !== cat.endpoint) { currentGalleryCategory = cat.endpoint; document.querySelectorAll('#category-selector-container .category-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); loadGallery(currentGalleryCategory, true); } else if (isLoadingMore) { showToast("Sabar dong~ Lagi ngambil gambar nih...", "info"); } }); categorySelectorContainer.appendChild(btn); }); }
+        function createImageCard(imageData, sourceContext = 'gallery') { const imageUrl = imageData.url; const artistName = imageData.artist_name || 'Artisnya Misterius~ 🤫'; const sourceUrl = imageData.source_url || imageUrl; const imageId = imageUrl; const isFavorite = isFavoriteCheck(imageUrl); const isInCollection = isImageInAnyCollection(imageUrl); const apiSource = imageData.apiSource || 'unknown'; const safeImageUrl = escapeHTML(imageUrl); const safeArtistName = escapeHTML(artistName); const safeSourceUrl = escapeHTML(sourceUrl); const safeApiSource = escapeHTML(apiSource); const dataForJson = { url: imageUrl, artist_name: artistName, source_url: sourceUrl, apiSource: apiSource }; const imageDataStringEscaped = escapeHTML(JSON.stringify(dataForJson)); const showRemoveButton = ['history_browse', 'history_gacha', 'favorites'].includes(sourceContext) || sourceContext.startsWith('collection_'); let removeButtonTitle = 'Hapus?'; if (sourceContext.startsWith('collection_')) removeButtonTitle = 'Keluarkan dari Koleksi Ini'; else if (sourceContext === 'favorites') removeButtonTitle = 'Hapus dari Favorit Kesayangan'; else if (sourceContext.startsWith('history_')) removeButtonTitle = 'Hapus dari Jejak History'; return `<div class="image-card group" data-url="${safeImageUrl}" data-artist="${escapeHTML(encodeURIComponent(artistName))}" data-source-url="${safeSourceUrl}" data-id="${imageId}" data-source-api="${safeApiSource}" title="Art oleh ${safeArtistName}. Klik buat intip!"><img src="${safeImageUrl}" alt="Ilustrasi anime oleh ${safeArtistName}" class="w-full h-auto object-cover block bg-black/20" loading="lazy" decoding="async" onerror="this.closest('.image-card')?.remove(); console.warn('Kartu dihapus karena gambar error:', this.src);"><div class="card-overlay"><button class="add-to-collection-card-btn card-button ${isInCollection ? 'in-collection' : ''}" title="${isInCollection ? 'Udah ada di Koleksi Lho!' : 'Tambah ke Koleksi Yuk!'}" onclick="event.stopPropagation(); handleAddToCollectionClick(this.dataset.image);" data-image='${imageDataStringEscaped}'><i data-lucide="${isInCollection ? 'folder-check' : 'plus-square'}"></i></button><button class="favorite-btn card-button ${isFavorite ? 'active' : ''}" data-image='${imageDataStringEscaped}' title="${isFavorite ? 'Batalin Favorit? (╥_╥)' : 'Jadikan Favorit! ♡'}" onclick="event.stopPropagation(); toggleFavorite(this);"><i data-lucide="heart" class="${isFavorite ? 'fill-current' : ''}"></i></button></div>${showRemoveButton ? `<button class="remove-item-btn" data-id="${imageId}" data-source="${sourceContext}" title="${removeButtonTitle}" onclick="event.stopPropagation(); handleRemoveItem(this, '${sourceContext}');"><i data-lucide="x"></i></button>` : ''}</div>`; }
         async function loadGallery(categoryEndpoint, replace = false) {
-            currentApiConf = API_CONFIG[currentApiId];
-            const displayCategories = currentApiConf?.categories;
+            currentApiConf = API_CONFIG[currentApiId]; const displayCategories = currentApiConf?.categories;
             if (!displayCategories?.some(c => c.endpoint === categoryEndpoint)) { console.warn(`Kategori '${categoryEndpoint}' nggak valid buat API ${currentApiId}.`); renderInfo(galleryError, `Aww, kategori <span class="uwu-text">${escapeHTML(categoryEndpoint)}</span> nggak ketemu di API ini.`); loadMoreContainer?.classList.remove('hidden'); if(loadMoreBtn) { loadMoreBtn.disabled = true; loadMoreBtnText.textContent = "Error kategori!"; } return; }
             if (isLoadingMore && !replace) { showToast("Sabar yaa~ Lagi ambil gambar nih...", "info"); return; }
 
-            isLoadingMore = true;
-            showLoader(galleryLoader);
-            hideInfo(galleryError);
-            loadMoreBtn.disabled = true; // Nonaktif SELAMA loading
-            loadMoreBtn.classList.add('loading');
+            isLoadingMore = true; showLoader(galleryLoader); hideInfo(galleryError);
+            loadMoreBtn.disabled = true; loadMoreBtn.classList.add('loading'); // Disable HANYA saat loading
 
             if (replace) { galleryGrid.innerHTML = ''; galleryGrid.dataset.loadedCategory = categoryEndpoint; mainContentArea.scrollTop = 0; console.log(`Galeri direset buat kategori: ${categoryEndpoint}`); }
 
@@ -982,37 +871,30 @@
                 if (errorCount > 0) { showToast(`Gagal muat ${errorCount} gambar. Mungkin coba lagi nanti?`, "error"); }
 
                 if (images?.length > 0) {
-                    let htmlFragment = '';
-                    images.forEach(img => { if (img?.url) { htmlFragment += createImageCard(img, 'gallery'); addToHistory(img, 'browse'); } else { console.warn("Ngelewatin data gambar aneh:", img); } });
+                    let htmlFragment = ''; images.forEach(img => { if (img?.url) { htmlFragment += createImageCard(img, 'gallery'); addToHistory(img, 'browse'); } else { console.warn("Ngelewatin data gambar aneh:", img); } });
                     galleryGrid.insertAdjacentHTML('beforeend', htmlFragment);
                     lucide.createIcons({ nodes: galleryGrid.querySelectorAll('[data-lucide]') });
                 } else {
-                    // Tetap bisa load more, tapi kasih tau kalau request ini kosong
-                    if (!replace) { // Hanya tampilkan toast jika ini adalah hasil 'load more'
-                        showToast("Nggak nemu gambar baru lagi nih, tapi boleh coba terus kok 😉", "info");
-                    } else if (galleryGrid.children.length === 0) { // Jika load awal dan kosong
-                         renderInfo(galleryError, "Yah, nggak nemu gambar buat kategori ini... (´。＿。｀)");
-                    }
+                    // Kasih tau aja kalau request ini ga dapet apa2, tapi tombol tetap bisa diklik
+                    if (!replace) { showToast("Nggak nemu gambar baru lagi nih, tapi boleh coba terus kok 😉", "info"); }
+                    else if (galleryGrid.children.length === 0) { renderInfo(galleryError, "Yah, nggak nemu gambar buat kategori ini... (´。＿。｀)"); }
                 }
-                // HAPUS logika canLoadMoreGallery
+                // Tidak ada lagi 'canLoadMoreGallery'
 
             } catch (error) {
                 console.error(`Error Muat Galeri (${categoryEndpoint}):`, error);
                 renderInfo(galleryError, `Waduh, ada error pas muat galeri: ${error.message}. Coba refresh atau ganti API yuk?`);
-                // Tombol load more tetap aktif setelah error
             } finally {
-                isLoadingMore = false;
-                hideLoader(galleryLoader);
+                isLoadingMore = false; hideLoader(galleryLoader);
                 loadMoreBtn.classList.remove('loading');
                 // --- Load More Button State (SELESAI LOADING) ---
-                loadMoreContainer?.classList.remove('hidden'); // PASTIKAN terlihat
-                loadMoreBtn.disabled = false; // SELALU aktifkan setelah selesai
+                loadMoreContainer?.classList.remove('hidden'); // Jamin terlihat
+                loadMoreBtn.disabled = false; // SELALU aktifkan setelah selesai (tidak peduli hasil)
                 loadMoreBtnText.textContent = "Muat Lebih Banyak Manisnya~"; // SELALU reset teksnya
             }
         }
 
         // --- History Functions ---
-        // (Tidak ada perubahan di sini)
         function addToHistory(imageData, type = 'browse') { if (!imageData?.url) return; const item = { url: imageData.url, artist_name: imageData.artist_name || 'Artisnya Misterius~ 🤫', source_url: imageData.source_url || imageData.url, timestamp: Date.now(), apiSource: imageData.apiSource || 'unknown' }; let history, key; if (type === 'gacha') { history = historyGacha; key = 'nekonime_history_gacha_v9'; } else { history = historyBrowse; key = 'nekonime_history_browse_v9'; } history = history.filter(i => i?.url !== item.url); history.unshift(item); if (history.length > HISTORY_MAX_ITEMS) { history = history.slice(0, HISTORY_MAX_ITEMS); } if (type === 'gacha') { historyGacha = history; } else { historyBrowse = history; } saveToLocalStorage(key, history); console.log(`Ditambah ke history ${type}: ${item.url}. Jumlah: ${history.length}`); }
         function loadItems(grid, loader, emptyElement, data, context) { if (!grid || !loader || !emptyElement) { console.error("Elemen buat loadItems ilang:", { grid, loader, emptyElement }); return; } showLoader(loader); grid.innerHTML = ''; hideInfo(emptyElement); if (!data || data.length === 0) { const emptyMessage = emptyElement.dataset.emptyMessage || "Di sini kosong..."; renderInfo(emptyElement, emptyMessage); } else { let htmlFragment = ''; data.forEach(d => { if (d?.url) { htmlFragment += createImageCard(d, context); } else { console.warn("Ngelewatin data item aneh di:", context, d); } }); grid.insertAdjacentHTML('beforeend', htmlFragment); lucide.createIcons({ nodes: grid.querySelectorAll('[data-lucide]') }); } hideLoader(loader); }
         function loadBrowseHistory() { loadItems(historyBrowseGrid, historyBrowseLoader, historyBrowseEmpty, historyBrowse, 'history_browse'); }
@@ -1020,7 +902,6 @@
         function switchHistoryTab(tab) { document.querySelectorAll('.history-tab-btn').forEach(b => b.classList.remove('active')); document.querySelectorAll('.history-content').forEach(c => c.classList.add('hidden')); if (tab === 'browse') { historyTabBrowse?.classList.add('active'); historyBrowseContent?.classList.remove('hidden'); console.log("Pindah ke tab History Jelajah"); } else if (tab === 'gacha') { historyTabGacha?.classList.add('active'); historyGachaContent?.classList.remove('hidden'); console.log("Pindah ke tab History Gacha"); } mainContentArea.scrollTop = 0; }
 
         // --- Favorites Functions ---
-        // (Tidak ada perubahan di sini)
         function loadFavorites() { loadItems(favoritesGrid, favoritesLoader, favoritesEmpty, currentFavorites, 'favorites'); }
         function toggleFavorite(button) { try { const dataStr = button.dataset.image; if (!dataStr) throw new Error("Data gambarnya nggak ketemu nih."); let data; try { data = JSON.parse(dataStr); } catch (e) { throw new Error(`Format datanya aneh: ${e.message}`); } if (!data?.url) throw new Error("URL gambarnya mana? o(TヘTo)"); const isFav = isFavoriteCheck(data.url); toggleFavoriteDirect(data, !isFav); showToast(isFav ? 'Dihapus dari favorit kesayanganmu... (╥_╥)' : 'Yeaay! Jadi favoritmu sekarang! ♡', 'success'); } catch (err) { console.error("Toggle Favorite Error:", err, button?.dataset.image); showToast(`Aduh, gagal ganti status favorit: ${err.message}`, "error"); } }
         function isFavoriteCheck(url) { return currentFavorites.some(f => f?.url === url); }
@@ -1030,7 +911,6 @@
         function toggleFavoriteDirect(data, makeFav) { const url = data.url; if (!url) return; if (makeFav) { if (!isFavoriteCheck(url)) { const item = { url: url, artist_name: data.artist_name || 'Artisnya Misterius~ 🤫', source_url: data.source_url || url, apiSource: data.apiSource || 'unknown' }; currentFavorites.unshift(item); console.log(`Tambah favorit: ${url}`); } } else { const initialLength = currentFavorites.length; currentFavorites = currentFavorites.filter(i => i?.url !== url); if (currentFavorites.length < initialLength) { console.log(`Hapus favorit: ${url}`); } } saveToLocalStorage('nekonime_favorites_v9', currentFavorites); updateFavoriteStatusUI(url, makeFav); if (window.location.hash === '#favorites' && !makeFav) { loadFavorites(); } }
 
         // --- Collections Functions ---
-        // (Tidak ada perubahan di sini)
         function saveCollections() { saveToLocalStorage('nekonime_collections_v9', currentCollections); }
         function loadCollectionsList() { showLoader(collectionListLoader); collectionListContainer.innerHTML = ''; hideInfo(collectionListEmpty); const names = Object.keys(currentCollections); if (names.length === 0) { renderInfo(collectionListEmpty, collectionListEmpty.dataset.emptyMessage || "Kamu belum punya koleksi..."); } else { names.sort((a, b) => a.localeCompare(b)).forEach(name => { const count = currentCollections[name]?.length || 0; const li = document.createElement('div'); li.className = 'collection-list-item group'; const escapedName = escapeHTML(name); li.innerHTML = `<div class="collection-name-wrapper" onclick="showCollectionDetail('${escapedName}')" title="Lihat isi koleksi '${escapedName}'"><span class="collection-name font-medium group-hover:text-purple-300 transition-colors">${escapedName}</span></div><span class="collection-count ml-2">${count} item${count !== 1 ? 's' : ''}</span><button class="collection-delete-btn" data-name="${escapedName}" title="Hapus Koleksi '${escapedName}'? (Hati-hati!)"><i data-lucide="trash-2"></i></button>`; li.querySelector('.collection-delete-btn').addEventListener('click', (e) => { e.stopPropagation(); deleteCollection(name); }); collectionListContainer.appendChild(li); }); lucide.createIcons({ nodes: collectionListContainer.querySelectorAll('[data-lucide]') }); } hideLoader(collectionListLoader); }
         async function createCollection(name, dataToAdd = null) { const trimmed = name.trim(); if (!trimmed) { await showToast("Nama koleksinya nggak boleh kosong dong~", "error"); return { success: false, name: null }; } if (currentCollections[trimmed]) { await showToast(`Koleksi "${escapeHTML(trimmed)}" udah ada, <span class="uwu-text">Sayang</span>. Pilih nama lain ya~`, "error"); return { success: false, name: trimmed }; } currentCollections[trimmed] = []; let msg = `Koleksi baru "${escapeHTML(trimmed)}" berhasil dibuat! Yeay! 🎉`; if (dataToAdd && dataToAdd.url) { if (!currentCollections[trimmed].some(i => i.url === dataToAdd.url)) { currentCollections[trimmed].unshift({ url: dataToAdd.url, artist_name: dataToAdd.artist_name || 'Artisnya Misterius~ 🤫', source_url: dataToAdd.source_url || dataToAdd.url, apiSource: dataToAdd.apiSource || 'unknown' }); msg = `Koleksi "${escapeHTML(trimmed)}" dibuat & gambar <span class="uwu-text">manis</span> ini ditambah! ♡`; } } saveCollections(); await showToast(msg, "success"); return { success: true, name: trimmed }; }
@@ -1049,10 +929,63 @@
         async function addImageToCollection(name) { const data = pendingLightboxData; if (!data || !data.url || !name || !currentCollections[name]) { await showAlert("Gagal nambahin ke koleksi nih, datanya aneh.", "Error"); closeAddToCollectionModal(true); return; } if (currentCollections[name].some(i => i.url === data.url)) { await showToast(`Eh, udah ada di "${escapeHTML(name)}" ternyata! 😉`, "info"); closeAddToCollectionModal(true); return; } currentCollections[name].unshift({ url: data.url, artist_name: data.artist_name || 'Artisnya Misterius~ 🤫', source_url: data.source_url || data.url, apiSource: data.apiSource || 'unknown' }); saveCollections(); updateCollectionButtonStatus(data.url, true); closeAddToCollectionModal(true); await showToast(`Berhasil ditambah ke koleksi "${escapeHTML(name)}"! Mantap! 👍`, "success"); if (!collectionDetailView.classList.contains('hidden') && collectionDetailTitle.textContent === `Isi Koleksi: ${name}`) { loadCollectionImages(name); } if (!collectionsMainView.classList.contains('hidden')) { loadCollectionsList(); } }
         async function handleAddCreateCollectionSubmit(event) { event.preventDefault(); const name = addNewCollectionNameInput.value; const data = pendingLightboxData; if (!data || !data.url) { showToast("Data gambarnya ilang pas mau bikin koleksi baru.", "error"); return; } const { success: created, name: createdName } = await createCollection(name, data); if (created && createdName) { updateCollectionButtonStatus(data.url, true); closeAddToCollectionModal(true); if (!collectionsMainView.classList.contains('hidden')) { loadCollectionsList(); } } else if (!created && createdName) { addNewCollectionNameInput.focus(); addNewCollectionNameInput.select(); } else { addNewCollectionNameInput.focus(); } }
 
-        // --- Gacha Functions ---
+        // --- Gacha Functions (Tanpa Cooldown!) ---
         function resetGachaDisplay() { console.log("Ngereset tampilan Gacha..."); gachaImageWrapper.classList.add('hidden', 'opacity-0'); gachaResultImage.src = ""; gachaResultImage.onload = null; gachaResultImage.onerror = null; hideInfo(gachaErrorMsg); gachaPlaceholder.classList.remove('hidden'); gachaAnimationContainer.classList.remove('visible'); gachaAnimationContainer.innerHTML = ''; gachaResetButton.classList.add('hidden'); currentGachaResultData = null; }
         function triggerGachaAnimation() { gachaAnimationContainer.innerHTML = ''; for (let i = 0; i < 3; i++) { const card = document.createElement('div'); card.className = 'gacha-spinner-card'; card.style.animationDuration = `${GACHA_ANIMATION_BASE_DURATION}ms`; gachaAnimationContainer.appendChild(card); } gachaAnimationContainer.classList.add('visible'); }
-        async function performGacha() { if (isGachaRunning) { showToast("Sabar dulu yaa~ Gachanya lagi muter nih!", "info"); return; } isGachaRunning = true; gachaButton.disabled = true; resetGachaDisplay(); gachaPlaceholder.classList.add('hidden'); triggerGachaAnimation(); currentApiConf = API_CONFIG[currentApiId]; const availableEndpoints = currentApiConf?.allEndpoints || currentApiConf?.categories?.map(c => c.endpoint); if (!availableEndpoints || availableEndpoints.length === 0) { console.error(`Nggak nemu endpoint buat Gacha di API: ${currentApiId}`); renderInfo(gachaErrorMsg, `Waduh, nggak ada kategori buat Gacha di API ${currentApiConf?.name || 'ini'} T_T`, true); gachaAnimationContainer.classList.remove('visible'); gachaPlaceholder.classList.remove('hidden'); setTimeout(() => { gachaButton.disabled = false; isGachaRunning = false; }, GACHA_COOLDOWN); return; } const randomEndpoint = availableEndpoints[Math.floor(Math.random() * availableEndpoints.length)]; console.log(`Gacha dimulai! API: ${currentApiId}, Endpoint acak: ${randomEndpoint}`); try { const { data: images, errorCount, error: fetchError } = await fetchApiData(randomEndpoint, 1); if (fetchError) throw new Error(fetchError); if (errorCount > 0 || images.length === 0 || !images[0]?.url) { console.warn(`Gacha dari ${randomEndpoint} gagal atau nggak dapet gambar.`); throw new Error(`Gagal dapet gambar dari kategori acak <span class='uwu-text'>(${escapeHTML(randomEndpoint)})</span>. Coba lagi yuk?`); } const gachaData = images[0]; console.log("Hasil Gacha:", gachaData.url); addToHistory(gachaData, 'gacha'); gachaResultImage.onload = () => { console.log("Gambar hasil Gacha berhasil dimuat:", gachaData.url); currentGachaResultData = gachaData; gachaAnimationContainer.classList.remove('visible'); gachaAnimationContainer.innerHTML = ''; gachaImageWrapper.classList.remove('hidden'); requestAnimationFrame(() => gachaImageWrapper.classList.remove('opacity-0')); gachaResetButton.classList.remove('hidden'); hideInfo(gachaErrorMsg); showToast("Dapet ini! Semoga suka yaa~ ♡ Klik gambarnya buat lihat detail!", "success", 4500); setTimeout(() => { gachaButton.disabled = false; isGachaRunning = false; }, GACHA_COOLDOWN); }; gachaResultImage.onerror = () => { console.error("Gambar hasil Gacha gagal dimuat:", gachaData.url); throw new Error("Yah, gambarnya gagal dimuat... (｡•́︿•̀｡) Coba Gacha lagi?"); }; gachaResultImage.src = gachaData.url; } catch (error) { console.error("Error pas Gacha:", error); gachaAnimationContainer.classList.remove('visible'); gachaAnimationContainer.innerHTML = ''; renderInfo(gachaErrorMsg, error.message || "Aduuh, Gachanya lagi ngambek nih...", true); gachaImageWrapper.classList.add('hidden', 'opacity-0'); gachaPlaceholder.classList.remove('hidden'); setTimeout(() => { gachaButton.disabled = false; isGachaRunning = false; }, GACHA_COOLDOWN); } }
+        async function performGacha() {
+            if (isGachaRunning) { showToast("Sabar dulu yaa~ Gachanya lagi muter nih!", "info"); return; } // Flag tetap perlu!
+            isGachaRunning = true;
+            gachaButton.disabled = true;
+
+            resetGachaDisplay();
+            gachaPlaceholder.classList.add('hidden');
+            triggerGachaAnimation();
+
+            currentApiConf = API_CONFIG[currentApiId];
+            const availableEndpoints = currentApiConf?.allEndpoints || currentApiConf?.categories?.map(c => c.endpoint);
+
+            if (!availableEndpoints || availableEndpoints.length === 0) {
+                 console.error(`Nggak nemu endpoint buat Gacha di API: ${currentApiId}`);
+                 renderInfo(gachaErrorMsg, `Waduh, nggak ada kategori buat Gacha di API ${currentApiConf?.name || 'ini'} T_T`, true);
+                 gachaAnimationContainer.classList.remove('visible'); gachaPlaceholder.classList.remove('hidden');
+                 // Langsung aktifkan tombol & reset flag, tanpa cooldown
+                 gachaButton.disabled = false; isGachaRunning = false;
+                 return;
+            }
+
+            const randomEndpoint = availableEndpoints[Math.floor(Math.random() * availableEndpoints.length)];
+            console.log(`Gacha dimulai! API: ${currentApiId}, Endpoint acak: ${randomEndpoint}`);
+
+            try {
+                const { data: images, errorCount, error: fetchError } = await fetchApiData(randomEndpoint, 1);
+                if (fetchError) throw new Error(fetchError);
+                if (errorCount > 0 || images.length === 0 || !images[0]?.url) { throw new Error(`Gagal dapet gambar dari kategori acak <span class='uwu-text'>(${escapeHTML(randomEndpoint)})</span>. Coba lagi yuk?`); }
+
+                const gachaData = images[0]; console.log("Hasil Gacha:", gachaData.url);
+                addToHistory(gachaData, 'gacha');
+
+                gachaResultImage.onload = () => {
+                    console.log("Gambar hasil Gacha berhasil dimuat:", gachaData.url);
+                    currentGachaResultData = gachaData; gachaAnimationContainer.classList.remove('visible'); gachaAnimationContainer.innerHTML = '';
+                    gachaImageWrapper.classList.remove('hidden'); requestAnimationFrame(() => gachaImageWrapper.classList.remove('opacity-0'));
+                    gachaResetButton.classList.remove('hidden'); hideInfo(gachaErrorMsg);
+                    showToast("Dapet ini! Semoga suka yaa~ ♡ Klik gambarnya buat lihat detail!", "success", 4500);
+                    // Langsung aktifkan tombol & reset flag
+                    gachaButton.disabled = false; isGachaRunning = false;
+                };
+                gachaResultImage.onerror = () => { console.error("Gambar hasil Gacha gagal dimuat:", gachaData.url); throw new Error("Yah, gambarnya gagal dimuat... (｡•́︿•̀｡) Coba Gacha lagi?"); };
+                gachaResultImage.src = gachaData.url;
+
+            } catch (error) {
+                console.error("Error pas Gacha:", error);
+                gachaAnimationContainer.classList.remove('visible'); gachaAnimationContainer.innerHTML = '';
+                renderInfo(gachaErrorMsg, error.message || "Aduuh, Gachanya lagi ngambek nih...", true);
+                gachaImageWrapper.classList.add('hidden', 'opacity-0'); gachaPlaceholder.classList.remove('hidden');
+                // Langsung aktifkan tombol & reset flag
+                gachaButton.disabled = false; isGachaRunning = false;
+            }
+        }
+
 
         // --- Settings & Data Management ---
         async function clearData(key, typeName, callback) { const confirm = await showConfirm(`Yakin mau hapus semua data ${typeName}? Jejak ${typeName.toLowerCase()}mu bakal hilang lho...`, `Hapus ${typeName}?`); if (confirm) { localStorage.removeItem(key); if (callback) callback(); await showToast(`Data ${typeName} sudah dihapus! Bersih~ ✨`, "info"); const currentPage = window.location.hash.substring(1) || 'gallery'; if ((currentPage === 'history' && (key.includes('history'))) || (currentPage === 'favorites' && key.includes('favorites')) || (currentPage === 'collections' && key.includes('collections'))) { if (key.includes('history_browse')) loadBrowseHistory(); if (key.includes('history_gacha')) loadGachaHistory(); if (key.includes('favorites')) loadFavorites(); if (key.includes('collections')) { loadCollectionsList(); showCollectionView('main'); } } } else { await showToast("Fiuhh~ Nggak jadi dihapus deh.", "info"); } }
@@ -1075,63 +1008,41 @@
         // --- Initialization and Event Listeners ---
         window.addEventListener('hashchange', handleHashChange);
         window.addEventListener('load', () => {
-            currentApiId = loadFromLocalStorage('nekonime_api_v9', 'nekos');
-            currentApiConf = API_CONFIG[currentApiId];
-            currentGalleryCategory = currentApiConf?.categories[0]?.endpoint || '';
-            handleHashChange();
-            lucide.createIcons();
-            populateApiSelector();
-
-            // Global click listener for cards
+            currentApiId = loadFromLocalStorage('nekonime_api_v9', 'nekos'); currentApiConf = API_CONFIG[currentApiId]; currentGalleryCategory = currentApiConf?.categories[0]?.endpoint || '';
+            handleHashChange(); lucide.createIcons(); populateApiSelector();
+            // Global listeners
             mainContent.addEventListener('click', (e) => { const card = e.target.closest('.image-card'); const isButton = e.target.closest('button.card-button, button.remove-item-btn'); if (card && !isButton) { openLightbox(card); } });
-            // Global escape key listener
             window.addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (addToCollectionModal.classList.contains('visible')) closeAddToCollectionModal(true); else if (lightboxModal.classList.contains('visible')) closeLightbox(); else if (alertModal.classList.contains('visible')) alertModal.classList.remove('visible'); else if (confirmModal.classList.contains('visible')) confirmModal.classList.remove('visible'); else if (feedbackModal.classList.contains('visible')) closeFeedbackModal(); else if (mobileNavOverlay.classList.contains('visible')) closeMobileNav(); } });
-            // Load more button click
-            loadMoreBtn?.addEventListener('click', () => {
-                // Hapus check canLoadMoreGallery, hanya cek isLoadingMore
-                if (!isLoadingMore) {
-                    loadGallery(currentGalleryCategory, false); // Selalu coba load more!
-                } else {
-                    showToast("Sabar sebentar yaa, lagi proses nih~", "info"); // Kasih tau kalau lagi sibuk
-                }
-            });
-            // Gacha buttons
+            // Specific listeners
+            loadMoreBtn?.addEventListener('click', () => { if (!isLoadingMore) { loadGallery(currentGalleryCategory, false); } else { showToast("Sabar sebentar yaa, lagi proses nih~", "info"); } });
             gachaButton?.addEventListener('click', performGacha);
             gachaResetButton?.addEventListener('click', resetGachaDisplay);
             gachaImageWrapper?.addEventListener('click', () => { if (currentGachaResultData) { openLightbox(currentGachaResultData); } else { showToast("Hmm, data gambarnya nggak ketemu buat dibuka.", "info"); } });
-            // Mobile Nav
             mobileMenuToggle?.addEventListener('click', openMobileNav);
             closeMobileNavBtn?.addEventListener('click', closeMobileNav);
             mobileNavLinksContainer?.addEventListener('click', (e) => { const link = e.target.closest('a.nav-link'); const fbBtn = e.target.closest('#feedback-button-mobile'); if (link && !link.classList.contains('disabled')) { closeMobileNav(); } else if (fbBtn) { closeMobileNav(); openFeedbackModal(); } else if (link?.classList.contains('disabled')) { e.preventDefault(); showToast("Fitur ini belum siap nih, <span class='uwu-text'>sabar yaa~ (o˘◡˘o)</span>", "info"); closeMobileNav(); } });
-            // Feedback Modal
             closeFeedbackModalButton?.addEventListener('click', closeFeedbackModal);
             feedbackForm?.addEventListener('submit', handleFeedbackSubmit);
-            // History Tabs
             historyTabBrowse?.addEventListener('click', () => switchHistoryTab('browse'));
             historyTabGacha?.addEventListener('click', () => switchHistoryTab('gacha'));
-            // Collections
             createCollectionForm?.addEventListener('submit', (e) => { e.preventDefault(); const name = newCollectionNameInput.value; createCollection(name).then(({success}) => { if (success) { newCollectionNameInput.value = ''; loadCollectionsList(); } else { newCollectionNameInput.focus(); newCollectionNameInput.select(); } }); });
             backToCollectionsBtn?.addEventListener('click', () => showCollectionView('main'));
             closeAddToCollectionModalBtn?.addEventListener('click', () => closeAddToCollectionModal(true));
             addToCollectionModal?.addEventListener('click', (e) => { if (e.target === addToCollectionModal) { closeAddToCollectionModal(true); } });
             addCreateCollectionForm?.addEventListener('submit', handleAddCreateCollectionSubmit);
-            // Settings
             apiSelector?.addEventListener('change', handleApiChange);
             clearHistoryBrowseBtn?.addEventListener('click', () => clearData('nekonime_history_browse_v9', 'History Jelajah', () => { historyBrowse = []; loadBrowseHistory(); }));
             clearHistoryGachaBtn?.addEventListener('click', () => clearData('nekonime_history_gacha_v9', 'History Gacha', () => { historyGacha = []; loadGachaHistory(); }));
             clearFavoritesBtn?.addEventListener('click', () => clearData('nekonime_favorites_v9', 'Favorit', () => { currentFavorites = []; updateFavoriteStatusUI(null, false); loadFavorites(); }));
             clearCollectionsBtn?.addEventListener('click', () => clearData('nekonime_collections_v9', 'Koleksi', () => { currentCollections = {}; updateAllCollectionButtonsState(); loadCollectionsList(); showCollectionView('main'); }));
             clearAllDataBtn?.addEventListener('click', clearAllLocalData);
-            // Disabled Nav Links
             document.querySelectorAll('a.nav-link.disabled').forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); showToast("Fitur ini belum siap nih, <span class='uwu-text'>sabar yaa~ (o˘◡˘o)</span>", "info"); }); });
-            // Modals OK/Cancel
             alertModalOk?.addEventListener('click', () => alertModal.classList.remove('visible'));
             confirmModalCancel?.addEventListener('click', () => confirmModal.classList.remove('visible'));
-            // Lightbox actions
             lightboxFavoriteBtn?.addEventListener('click', toggleFavoriteLightbox);
             lightboxAddCollectionBtn?.addEventListener('click', () => { if(currentLightboxImageData) { handleAddToCollectionClick(currentLightboxImageData); } else { showToast("Waduh, data gambarnya ilang pas mau ditambah ke koleksi.", "error"); } });
 
-            console.log("NekoNime v9.2.8 Siap! Load More Sepuasnya & Kategori Makin Banyak! Nyaa~ (づ｡◕‿‿◕｡)づ");
+            console.log("NekoNime v9.2.9 Berangkat! Gacha super cepat, Load More tanpa henti! Nyaa~ (づ｡◕‿‿◕｡)づ");
         });
 
     </script>
